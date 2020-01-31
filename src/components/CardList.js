@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import Card from './Card';
 
 const CardList = ({ robots }) => {
+  if (true) {
+    throw new Error('Nooooooo');
+  }
   return (
-    <div>
+    <Fragment>
       {
         robots.map((user, i) => {
           return (
@@ -16,8 +19,8 @@ const CardList = ({ robots }) => {
           );
         })
       }
-    </div>
+    </Fragment>
   );
-}
+};
 
 export default CardList;
